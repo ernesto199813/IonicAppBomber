@@ -1,0 +1,85 @@
+.header{
+    font-family: 'Montserrat', sans-serif;
+  background-color:#023897;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding:1em;
+    border-radius: 3px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: fixed;
+    color: rgb(255, 255, 255);
+    list-style-type: none;
+    font-weight: bold;
+
+  &__h1{
+  }
+  &__a{color: rgb(255, 255, 255);
+    font-size: 20px; /* Tamaño de letra deseado */
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+  }
+  
+  &__button{
+      display: none;
+      cursor: pointer;
+      background-color: #023897;
+      color: rgb(255, 255, 255);
+      @media screen and (max-width:990px){
+          display: flex;
+      }
+  }
+  &__svg{
+      width:2em;
+      height:2em;
+     
+  
+  }
+  &__nav{
+      @media screen and (max-width:990px){
+          width:100%;
+          height:0vh;
+          
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          pointer-events: none;
+          transition: all .5s ease;
+
+          &--activo{
+              height:30vh;
+              pointer-events: auto;
+              
+             
+          }
+      }
+  }
+  &__ul{
+    
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top:30px;
+      list-style-type: none; /* Esto eliminará los puntos de viñeta */
+      padding: 0; /* Esto elimina el relleno predeterminado de la lista */
+      margin: 0; /* Esto elimina el margen predeterminado de la lista */
+
+      @media screen and (max-width:990px){
+          flex-direction:column;
+      }
+  }
+  &__li{
+    
+      margin: 0 .5em;
+      @media screen and (max-width:990px){
+          margin: .5em 0;
+      }
+  }
+}

@@ -1,0 +1,52 @@
+<ion-content [fullscreen]="true">
+ 
+  <div class="header">
+  
+    <img src="https://www.gdc.gob.ve/intranet_bomb/custom-files/img/logo/vl_logo_app.gif" >
+
+
+  </div>
+  
+
+  
+  <div class="contenedor"> 
+    
+  
+
+    <div class="ion-padding">
+    
+    <ion-item>
+    <ion-input type="email" [(ngModel)]="email" placeholder="Correo electrónico" ></ion-input>
+    <ion-icon name="person-outline"></ion-icon>
+    </ion-item> 
+    
+  
+    <ion-item>
+    <ion-input type="password" [(ngModel)]="password" placeholder="Contraseña"></ion-input>
+    <ion-icon name="lock-closed-outline"></ion-icon>
+    </ion-item> 
+    
+    <ion-item>
+    <ion-input type="password" [(ngModel)]="repassword" placeholder="Contraseña"></ion-input>
+    <ion-icon name="lock-closed-outline"></ion-icon>
+    </ion-item> 
+    
+  
+      
+      <div class="signupLink">
+        
+      <p> Ya estoy registrado <a  [routerLink]="['/login']"   >Iniciar sesion</a> </p>
+      
+      </div>
+    </div>
+
+
+    <ion-fab vertical="bottom" horizontal="end" style="margin-bottom">
+      <ion-fab-button (click)="login()">
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    
+  </div>
+
+  </ion-content>

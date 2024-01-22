@@ -1,0 +1,300 @@
+<ion-content [fullscreen]="true" >
+
+    <header class="header">
+  
+      <li class="header__li"> <a href="/aprende" class="header__a"> CONTROL DE ACTIVIDAD</a></li>
+    
+      <button (click)=" setActive() " class="header__button">
+        <svg class="header__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </button>
+    
+      <nav class="header__nav" [ngClass]="{ 'header__nav--activo' : active }">
+        <ul class="header__ul">
+          <ng-container *ngFor="let item of headerItems">
+            <li class="header__li">
+              <a [href]="item.link" class="header__a">
+                
+                <span class="header__link-text">{{ item.text }}</span>
+              </a>
+            </li>
+          </ng-container>
+        </ul>
+      </nav>
+      
+    </header>
+  
+    <br>
+    <br>
+    <br>
+    <br>
+  
+    
+    
+    <ion-card *ngFor="let miembro of miembros">
+
+
+      <ion-card-header>
+        {{ miembro.dia_de_la_semana }}
+      </ion-card-header>
+  
+      <ion-card-content>
+  <!--  
+        <ion-img [src]="miembro.imagenUrl" alt="Imagen de miembro"></ion-img> -->
+  
+        <ion-list lines="full"> 
+
+     
+           
+<!--------------------------------------------------------------------------------->
+
+
+<ion-grid>
+  
+  <ion-row>
+    <ion-col size="8">
+      <ion-label justify-content="center">7:00 am - 8:00 am </ion-label>
+    </ion-col>
+    <ion-col size="13">
+
+      <ion-list>
+        <ion-item>
+          <ion-text>{{ miembro.descripcion_actividad }}</ion-text>
+        </ion-item>
+      </ion-list>
+
+    </ion-col> 
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="8">
+      <ion-label justify-content="center">8:00 am - 9:00 am </ion-label>
+    </ion-col>
+    <ion-col size="13">
+
+      <ion-list>
+        <ion-item>
+          <ion-text >{{ miembro.descripcion_actividad }}</ion-text>
+        </ion-item>
+      </ion-list>
+
+    </ion-col> 
+  </ion-row>
+
+
+
+
+  
+  <ion-row>
+    <ion-col size="8">
+      <ion-label justify-content="center">9:00 am - 10:00 am </ion-label>
+    </ion-col>
+    <ion-col size="13">
+
+      <ion-list>
+        <ion-item>
+          <ion-text >{{ miembro.descripcion_actividad }}</ion-text>
+        </ion-item>
+      </ion-list>
+
+    </ion-col> 
+  </ion-row>
+
+
+
+
+  
+  <ion-row>
+    <ion-col size="8">
+      <ion-label justify-content="center">10:00 am - 11:00 am </ion-label>
+    </ion-col>
+    <ion-col size="13">
+
+      <ion-list>
+        <ion-item>
+          <ion-text >{{ miembro.descripcion_actividad }}</ion-text>
+        </ion-item>
+      </ion-list>
+
+    </ion-col> 
+  </ion-row>
+
+
+
+
+  
+  <ion-row>
+    <ion-col size="8">
+      <ion-label justify-content="center">11:00 am - 12:00 pm </ion-label>
+    </ion-col>
+    <ion-col size="13">
+
+      <ion-list>
+        <ion-item>
+          <ion-text >{{ miembro.descripcion_actividad }}</ion-text>
+        </ion-item>
+      </ion-list>
+
+    </ion-col> 
+  </ion-row>
+
+
+
+  
+  <ion-row>
+    <ion-col size="8">
+      <ion-label justify-content="center">12:00 pm - 1:00 pm </ion-label>
+    </ion-col>
+    <ion-col size="13">
+
+      <ion-list>
+        <ion-item>
+          <ion-text >{{ miembro.H1214 }}</ion-text>
+        </ion-item>
+      </ion-list>
+
+    </ion-col> 
+  </ion-row>
+
+  
+  <ion-row>
+    <ion-col size="8">
+      <ion-label justify-content="center">1:00 pm - 2:00 pm </ion-label>
+    </ion-col>
+    <ion-col size="13">
+
+      <ion-list>
+        <ion-item>
+          <ion-text >{{ miembro.H1214 }}</ion-text>
+        </ion-item>
+      </ion-list>
+
+    </ion-col> 
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col size="8">
+      <ion-label justify-content="center">2:00 pm - 3:00 pm </ion-label>
+    </ion-col>
+    <ion-col size="13">
+      <ion-list>
+        <ion-item>
+          <ion-text >{{ miembro.descripcion_actividad }}</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-col> 
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col size="8">
+      <ion-label justify-content="center">3:00 pm - 4:00 pm </ion-label>
+    </ion-col>
+    <ion-col size="13">
+      <ion-list>
+        <ion-item>
+          <ion-text >{{ miembro.descripcion_actividad }}</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-col> 
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col size="8">
+      <ion-label justify-content="center">4:00 pm - 5:00 pm </ion-label>
+    </ion-col>
+    <ion-col size="13">
+      <ion-list>
+        <ion-item>
+          <ion-text >{{ miembro.descripcion_actividad }}</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-col> 
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="8">
+      <ion-label justify-content="center">5:00 pm - 6:00 pm </ion-label>
+    </ion-col>
+    <ion-col size="13">
+      <ion-list>
+        <ion-item>
+          <ion-text >{{ miembro.descripcion_actividad }}</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-col> 
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col size="8">
+      <ion-label justify-content="center">6:00 pm - 7:00 pm </ion-label>
+    </ion-col>
+    <ion-col size="13">
+      <ion-list>
+        <ion-item>
+          <ion-text >{{ miembro.H67 }}</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-col> 
+  </ion-row>
+
+
+</ion-grid>
+
+
+<!------------------------------------------------------------------------------------>
+
+
+        </ion-list>
+  
+      </ion-card-content>
+  
+      <ion-button expand="full" (click)="toggleDetails(miembro)">
+        {{ miembro.mostrarDetalles ? 'Ocultar Detalles' : 'Mostrar Detalles' }}
+      </ion-button>
+  
+      <ion-card-content *ngIf="miembro.mostrarDetalles">
+       
+        <ion-list lines="full">
+  
+          
+  
+          <ion-item>
+            <ion-label>Estado</ion-label>
+            <ion-text>{{ miembro.estado_actividad }}</ion-text>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Fecha de inicio</ion-label>
+            <ion-text>{{ miembro.fecha_de_inicio }}</ion-text>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Fecha de finalizacion</ion-label>
+            <ion-text>{{ miembro.fecha_de_finalizacion }}</ion-text>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Reporte</ion-label>
+            <ion-text>{{ miembro.reporte }}</ion-text>
+          </ion-item>
+
+
+
+        </ion-list>
+  
+      </ion-card-content>
+    </ion-card>
+   
+  
+  </ion-content>
+  
+  
+  
+  

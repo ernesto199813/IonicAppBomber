@@ -1,5 +1,7 @@
 {
   "name": "bdcapp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

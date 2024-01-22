@@ -1,20 +1,125 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" >
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <header class="header">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <li class="header__li"> <a href="/aprende" class="header__a"> PERSONAL DE BOMBEROS </a></li>
+  
+    <button (click)=" setActive() " class="header__button">
+      <svg class="header__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+      </svg>
+    </button>
+  
+    <nav class="header__nav" [ngClass]="{ 'header__nav--activo' : active }">
+      <ul class="header__ul">
+        <ng-container *ngFor="let item of headerItems">
+          <li class="header__li">
+            <a [href]="item.link" class="header__a">
+              
+              <span class="header__link-text">{{ item.text }}</span>
+            </a>
+          </li>
+        </ng-container>
+      </ul>
+    </nav>
+    
+  </header>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <ion-card *ngFor="let miembro of miembros">
+    <ion-card-header>
+      {{ miembro.jerarquia }}
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-img [src]="miembro.imagenUrl" alt="Imagen de miembro"></ion-img>
+
+      <ion-list lines="full">
+        <ion-item>
+          <ion-label>Nombre(s)</ion-label>
+          <ion-text>{{ miembro.nombres }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Apellido(s)</ion-label>
+          <ion-text>{{ miembro.apellidos }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Cedula</ion-label>
+          <ion-text>{{ miembro.cedula }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Correo</ion-label>
+          <ion-text>{{ miembro.correo }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Telefono</ion-label>
+          <ion-text>{{ miembro.telefono }}</ion-text>
+        </ion-item>
+
+        
+ 
+
+      </ion-list>
+    </ion-card-content>
+
+    <ion-button expand="full" (click)="toggleDetails(miembro)">
+      {{ miembro.mostrarDetalles ? 'Ocultar Detalles' : 'Mostrar Detalles' }}
+    </ion-button>
+
+    <ion-card-content *ngIf="miembro.mostrarDetalles">
+     
+      <ion-list lines="full">
+
+        <ion-item>
+          <ion-label>Jerarquia</ion-label>
+          <ion-text>{{ miembro.jerarquia }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Edad</ion-label>
+          <ion-text>{{ miembro.edad }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Altura</ion-label>
+          <ion-text>{{ miembro.altura }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Tipo de sangre</ion-label>
+          <ion-text>{{ miembro.tipo_de_sangre }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Carga Familiar</ion-label>
+          <ion-text>{{ miembro.Carga_Familiar }}</ion-text>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Fecha de Ingreso</ion-label>
+          <ion-text>{{ miembro.fecha_de_ingreso }}</ion-text>
+        </ion-item>
+
+
+      </ion-list>
+
+    </ion-card-content>
+  </ion-card>
+ 
+
 </ion-content>
+
+
+
